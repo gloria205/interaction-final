@@ -68,9 +68,11 @@ nav {
   color: #b9aa98;
 }
 
+/* Nav link hover effect: change color to #? and add hoover effect for the contact button 
 .side-nav a:hover {
   color: #efe6d6;
 }
+  */
 
 /* Contact buttons */
 
@@ -248,7 +250,7 @@ nav {
   height: auto;
 
   transform-origin: center;
-  animation: record-spin 8s linear infinite;
+  animation: record-spin 8s linear infinite; /* delete infinite to 2*/
 }
 
 @keyframes record-spin {
@@ -356,3 +358,5 @@ nav {
     transition: none;
   }
 }
+
+/*홀리가 알려준 방법 지피티한테 붙여넣어주고 최대한 그걸로 하는데 그게 안되면 지피티가 알려준 방법대로 그리고 그걸 코딩을 발표로 설명할 줄 알아야함.*/
