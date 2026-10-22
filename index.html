@@ -1,91 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Vinyl House</title>
-        <link href="styles.css" type="text/css" rel="stylesheet" />
-         <script defer src="script.js"></script>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html"><img src="images/logo.svg" class="logo" /></a>
-                    </li>
-                    <div class="side-nav">
-                    <li><a href="about.html">ABOUT</a></li>
-                   <li><a href="records.html">RECORDS</a></li>
-                    <li><a href="events.html">EVENTS</a></li>
-                    <li><a href="visit.html">VISIT</a></li>
-                    <li><a href="contact.html" class="btn-yellow">CONTACT</a></li>
-                    </div>
-                </ul>
-            </nav>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <main>
-            <section class="hero">
-                <!-- Desk background -->
-                <img src="images/desk.jpg" class="hero-bg" />
+    <title>Vinyl House</title>
 
-                 <!-- Album stack, text, and sticker -->
-                <div class="album">
-                <img src="images/album-stack.png" class="album-stack" />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
 
-                <div class="hero-text">
-                    <h1>Good things<br /> come around.</h1>
-                    <p>Your next favorite record is waiting here. Explore new releases, secondhand finds, and staff picks chosen for the love of listening.</p>
-                    <a href="contact.html" class="btn-yellow">CONTACT</a>
-                </div>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="images/logo.svg" class="logo" alt="Vinyl House" />
+        </a>
 
-                <button class="sticker">
-                    <img src="images/sticker.png" />
-                </button>
-                </div>
+        <ul class="side-nav">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="records.html">RECORDS</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="visit.html">VISIT</a></li>
+          <li>
+            <a href="contact.html" class="btn-yellow">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-                <!-- Turntable includes the fixed tonearm -->
-                <div class="turntable">
-                    <img src="images/turntable.png" class="turntable-base" />
-                    <img src="images/record.png" class="record" />
-                </div>
-            </section>
-        </main>
+    <main>
+      <section class="hero">
+        <!-- Desk background -->
+        <img src="images/desk.jpg" class="hero-bg" alt="" />
 
-        <button data-modal-target="#modal">Open Modal</button>
+        <!-- Album stack -->
+        <div class="album">
+          <img
+            src="images/album-stack.png"
+            class="album-stack"
+            alt=""
+          />
+
+          <div class="hero-text">
+            <h1>Good things<br />come around.</h1>
+
+            <p>
+              Your next favorite record is waiting here.
+              Explore new releases, secondhand finds, and
+              staff picks chosen for the love of listening.
+            </p>
+
+            <a href="contact.html" class="btn-yellow">CONTACT</a>
+          </div>
+
+          <!-- Sticker opens the pop-up -->
+          <button
+            type="button"
+            class="sticker"
+            data-modal-target="#modal"
+          >
+            <img
+              src="images/sticker.png"
+              alt="View Listening Night event"
+            />
+          </button>
+        </div>
+
+        <!-- Turntable with fixed tonearm -->
+        <div class="turntable">
+          <img
+            src="images/turntable.png"
+            class="turntable-base"
+            alt="Turntable with tonearm"
+          />
+
+          <img
+            src="images/record.png"
+            class="record"
+            alt="Vinyl record"
+          />
+        </div>
+
+        <!-- Leaves -->
+        <img src="images/leaves.png" class="leaves" alt="" />
+      </section>
+    </main>
+
+    <!-- Pop-up from the JS tutorial -->
     <div class="modal" id="modal">
       <div class="modal-header">
-
-        <!-- Not sure how to do here if I put png of pop up modal? 
-
-        <div class="title">Example Modal</div>
-        <button data-close-button class="close-button">&times;</button>
+        <button
+          type="button"
+          data-close-button
+          class="close-button"
+          aria-label="Close pop-up"
+        >
+          &times;
+        </button>
       </div>
+
       <div class="modal-body">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, quam!
-        Veritatis nostrum, autem voluptatibus ut eius ab pariatur officia aut
-        quo officiis quae accusamus, tenetur asperiores quibusdam incidunt.
-        Dolorum, vero! Laboriosam, deserunt mollitia odio eius fugit repudiandae
-        molestias ipsa quam sequi esse quos. Praesentium dolorem enim iure
-        officiis animi, facere maiores asperiores dolores inventore magni!
-        Doloremque, sed tenetur odit similique, natus rerum quo sequi magni ad
-        cum quas ab quibusdam, minus vel beatae repudiandae dolor voluptas odio
-        quam quaerat tempora.
+        <img
+          src="images/pop-up.png"
+          alt="Listening Night at Vinyl House, November 14, 7–9 PM.
+               Free entry. Reservation required."
+        />
       </div>
     </div>
-    <div id="overlay">
-    </div>
-    -->
 
-    <div class="pop-up">
-        <div class="pop-up-content">
-            <span class="close">&times;</span>
-            <img src="images/pop-up.png" alt="Pop-up Image" />
-        </div>
-    </div>
-
-
-    </body>
+    <div id="overlay"></div>
+  </body>
 </html>
