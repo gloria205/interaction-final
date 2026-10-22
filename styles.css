@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap");
+
+/* Basic settings */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #181512;
+  font-family: "DM Sans", sans-serif;
+  color: #30251f;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Header */
+
+header {
+  background-color: #181512;
+}
+
+nav {
+  width: 1440px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 26px 70px 20px 67px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 227px;
+  height: 47px;
+}
+
+.side-nav {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+.side-nav a {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.14em;
+  color: #b9aa98;
+}
+
+.side-nav a:hover {
+  color: #efe6d6;
+}
+
+/* Contact buttons */
+
+.btn-yellow,
+.side-nav .btn-yellow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 155px;
+  height: 48px;
+  padding: 12px 26px;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.14em;
+  color: #d5a15c;
+
+  background-color: #ffffff;
+  border: 2px solid #d5a15c;
+  border-radius: 30px;
+  box-shadow: 0 3px 0 #d5a15c;
+}
+/* Need to fix
+.btn-yellow:hover,
+.side-nav .btn-yellow:hover {
+  background-color: #efe6d6;
+  color: #d5a15c;
+  border-color: #d5a15c;
+  box-shadow: 0 3px 0 #d5a15c;
+}
+  */
+
+/* Hero: 1440 × 715 */
+
+.hero {
+  position: relative;
+  width: 1440px;
+  height: 715px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Allow leaves to overlap the header,
+     while cropping the sides and bottom. */
+  clip-path: inset(-100px 0 0 0);
+}
+
+/* Desk */
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 715px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Album stack */
+
+.album {
+  position: absolute;
+  top: 48px;
+  left: -15px;
+  width: 638px;
+  height: 636.14px;
+  z-index: 1;
+}
+
+.album-stack {
+  width: 100%;
+  height: 100%;
+}
+
+/* Text: positions are relative to the album */
+
+.hero-text {
+  position: absolute;
+  top: 116px;
+  left: 103px;
+  width: 453px;
+}
+
+.hero-text h1 {
+  margin: 0 0 28px;
+
+  font-family: "Libre Baskerville", serif;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: normal;
+  color: #30251f;
+}
+
+.hero-text p {
+  width: 453px;
+  margin: 0 0 32px;
+
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #30251f;
+}
+
+.hero-text .btn-yellow {
+  margin-left: 3px;
+}
+
+/* Sticker: positions are relative to the album */
+
+.sticker {
+  position: absolute;
+  top: 387px;
+  left: 386px;
+
+  width: 170px;
+  height: 170px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sticker img {
+  width: 100%;
+  height: 100%;
+}
+
+.sticker:hover {
+  animation: sticker-wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes sticker-wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+/* Turntable */
+
+.turntable {
+  position: absolute;
+  top: 29.63px;
+  left: 677.69px;
+
+  width: 759.51px;
+  height: 644.23px;
+  z-index: 1;
+}
+
+.turntable-base {
+  width: 100%;
+  height: 100%;
+}
+
+/* Record: positions are relative to the turntable */
+
+.record {
+  position: absolute;
+  top: 54.12px;
+  left: 59.43px;
+
+  width: 526.15px;
+  height: auto;
+
+  transform-origin: center;
+  animation: record-spin 8s linear infinite;
+}
+
+@keyframes record-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Leaves */
+/* Desktop Y 68 minus header height 100 = -32 */
+
+.leaves {
+  position: absolute;
+  top: -32px;
+  left: -100px;
+
+  width: 394.17px;
+  height: 761px;
+
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Pop-up */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 388px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+  visibility: hidden;
+
+  z-index: 100;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+
+.modal-header {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 1;
+}
+
+.close-button {
+  padding: 0 6px;
+  border: none;
+  background: transparent;
+  color: #30251f;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+}
+
+/* Overlay */
+
+#overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(24, 21, 18, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+
+  z-index: 99;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .record,
+  .sticker:hover {
+    animation: none;
+  }
+
+  .modal,
+  #overlay {
+    transition: none;
+  }
+}
